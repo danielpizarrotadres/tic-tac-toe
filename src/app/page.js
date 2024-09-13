@@ -1,8 +1,8 @@
 import Image from "next/image";
 import styles from "./page.module.css";
 
-function Square() {
-  return <button className={styles.square}>X</button>;
+function Square({ value }) {
+  return <button className={styles.square}>{value}</button>;
 }
 
 function Board() {
