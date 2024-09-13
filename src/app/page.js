@@ -46,8 +46,22 @@ export default function Home() {
           </a>
         </div>
 
-        <div>
-          <button className="square">X</button>
+        <div className={styles.game}>
+          <div className={styles.row}>
+            <button className={styles.square}>X</button>
+            <button className={styles.square}>X</button>
+            <button className={styles.square}>X</button>
+          </div>
+          <div className={styles.row}>
+            <button className={styles.square}>X</button>
+            <button className={styles.square}>X</button>
+            <button className={styles.square}>X</button>
+          </div>
+          <div className={styles.row}>
+            <button className={styles.square}>X</button>
+            <button className={styles.square}>X</button>
+            <button className={styles.square}>X</button>
+          </div>
         </div>
         
       </main>
