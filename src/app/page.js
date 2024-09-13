@@ -1,6 +1,32 @@
 import Image from "next/image";
 import styles from "./page.module.css";
 
+function Square() {
+  return <button className={styles.square}>X</button>;
+}
+
+function Board() {
+  return (
+    <div className={styles.game}>
+        <div className={styles.row}>
+          <Square />
+          <Square />
+          <Square />
+        </div>
+        <div className={styles.row}>
+          <Square />
+          <Square />
+          <Square />
+        </div>
+        <div className={styles.row}>
+          <Square />
+          <Square />
+          <Square />
+        </div>
+      </div>
+  );
+}
+
 export default function Home() {
   return (
     <div className={styles.page}>
@@ -46,23 +72,7 @@ export default function Home() {
           </a>
         </div>
 
-        <div className={styles.game}>
-          <div className={styles.row}>
-            <button className={styles.square}>X</button>
-            <button className={styles.square}>X</button>
-            <button className={styles.square}>X</button>
-          </div>
-          <div className={styles.row}>
-            <button className={styles.square}>X</button>
-            <button className={styles.square}>X</button>
-            <button className={styles.square}>X</button>
-          </div>
-          <div className={styles.row}>
-            <button className={styles.square}>X</button>
-            <button className={styles.square}>X</button>
-            <button className={styles.square}>X</button>
-          </div>
-        </div>
+        <Board />
         
       </main>
       <footer className={styles.footer}>
