@@ -2,8 +2,10 @@
 
 import Image from "next/image";
 import styles from "./page.module.css";
+import { useState } from "react";
 
-function Square({ value }) {
+function Square() {
+  const [value, setValue] = useState(null);
   function handleClick() {
     console.log(`You clicked on square ${value}`);
   }
@@ -21,19 +23,19 @@ function Board() {
   return (
     <div className={styles.game}>
         <div className={styles.row}>
-          <Square value="1" />
-          <Square value="2" />
-          <Square value="3" />
+          <Square />
+          <Square />
+          <Square />
         </div>
         <div className={styles.row}>
-          <Square value="4" />
-          <Square value="5" />
-          <Square value="6" />
+          <Square />
+          <Square />
+          <Square />
         </div>
         <div className={styles.row}>
-          <Square value="7" />
-          <Square value="8" />
-          <Square value="9" />
+          <Square />
+          <Square />
+          <Square />
         </div>
       </div>
   );
