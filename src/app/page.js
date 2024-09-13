@@ -1,8 +1,20 @@
+"use client";
+
 import Image from "next/image";
 import styles from "./page.module.css";
 
 function Square({ value }) {
-  return <button className={styles.square}>{value}</button>;
+  function handleClick() {
+    console.log(`You clicked on square ${value}`);
+  }
+  return (
+    <button
+      className={styles.square}
+      onClick={handleClick}
+    >
+      {value}
+    </button>
+  );
 }
 
 function Board() {
