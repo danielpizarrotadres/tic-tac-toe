@@ -193,7 +193,7 @@ a.secondary {
   align-items: center;
 }
 
-.game {
+.board {
   display: flex;
   flex-direction: column;
 }
