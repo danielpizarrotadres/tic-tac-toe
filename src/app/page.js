@@ -39,7 +39,7 @@ function Board() {
   }
 
   return (
-    <div className={styles.game}>
+    <>
       <div className={styles.status}>{status}</div>
       <div className={styles.row}>
         <Square value={squares[0]} onSquareClick={() =>handleClick(0)} />
@@ -55,6 +55,19 @@ function Board() {
         <Square value={squares[6]} onSquareClick={() =>handleClick(6)} />
         <Square value={squares[7]} onSquareClick={() =>handleClick(7)} />
         <Square value={squares[8]} onSquareClick={() =>handleClick(8)} />
+      </div>
+    </>
+  );
+}
+
+function Game() {
+  return (
+    <div className={styles.game}>
+      <div className={styles.board}>
+        <Board />
+      </div>
+      <div className={styles.history}>
+        {/* TODO */}
       </div>
     </div>
   );
@@ -125,7 +138,7 @@ export default function Home() {
           </a>
         </div>
 
-        <Board />
+        <Game />
         
       </main>
       <footer className={styles.footer}>
