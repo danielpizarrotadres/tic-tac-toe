@@ -205,6 +205,10 @@ a.secondary {
   align-items: center;
 }
 
+.status code {
+  margin-left: 4px;
+}
+
 .item {
   font-family: var(--font-geist-mono);
   padding-left: 0;
