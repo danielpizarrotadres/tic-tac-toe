@@ -75,15 +75,11 @@ function Game() {
   const moves = history.map((squares, move) => {
     let description;
     if (move > 0) {
-      description = 'Go to move #' + move;
+      description = 'Go to move';
     } else {
       description = 'Go to game start';
     }
-    return (
-      <li key={move}>
-        <button onClick={() => jumpTo(move)}>{description}</button>
-      </li>
-    );
+    return <li key={move} onClick={() => jumpTo(move)}>{description} <code>#{move}</code></li>;
   });
 
   return (
@@ -122,7 +118,7 @@ export default function Home() {
   return (
     <div className={styles.page}>
       <main className={styles.main}>
-        <Image
+        {/* <Image
           className={styles.logo}
           src="https://nextjs.org/icons/next.svg"
           alt="Next.js logo"
@@ -135,7 +131,7 @@ export default function Home() {
             Get started by editing <code>src/app/page.js</code>.
           </li>
           <li>Save and see your changes instantly.</li>
-        </ol>
+        </ol> */}
 
         <div className={styles.ctas}>
           <a
@@ -151,16 +147,16 @@ export default function Home() {
               width={20}
               height={20}
             />
-            Deploy now
+            Tic tac toe
           </a>
-          <a
+          {/* <a
             href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
             target="_blank"
             rel="noopener noreferrer"
             className={styles.secondary}
           >
-            Read our docs
-          </a>
+            Give me a star on GitHub
+          </a> */}
         </div>
 
         <Game />
@@ -179,7 +175,7 @@ export default function Home() {
             width={16}
             height={16}
           />
-          Learn
+          GitHub
         </a>
         <a
           href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
@@ -193,7 +189,7 @@ export default function Home() {
             width={16}
             height={16}
           />
-          Examples
+          About
         </a>
         <a
           href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
@@ -207,7 +203,7 @@ export default function Home() {
             width={16}
             height={16}
           />
-          Go to nextjs.org →
+          Go to by website →
         </a>
       </footer>
     </div>

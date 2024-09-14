@@ -199,5 +199,19 @@ a.secondary {
 }
 
 .status {
-  margin-bottom: 10px;
+  margin-bottom: 32px;
+}
+
+.item {
+  font-family: var(--font-geist-mono);
+  padding-left: 0;
+  margin: 0;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: -0.01em;
+  list-style-position: inside;
+}
+
+.history {
+  margin-top: 32px;
 }
