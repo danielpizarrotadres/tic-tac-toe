@@ -200,9 +200,9 @@ a.secondary {
 
 .status {
   margin-bottom: 32px;
-  display: flex;
+  /* display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: center; */
 }
 
 .status code {
