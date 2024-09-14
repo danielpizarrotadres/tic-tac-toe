@@ -203,7 +203,7 @@ export default function Home() {
             width={16}
             height={16}
           />
-          Go to by website →
+          Go to my website →
         </a>
       </footer>
     </div>
