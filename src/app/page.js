@@ -34,9 +34,13 @@ function Board({ xIsNext, squares, onPlay }) {
     status = "Next player →";
   }
 
+  const aux = status == "Winner: "
+    ? <> {status} <code>{winner}</code> </>
+    : <> {status} <code>{(xIsNext ? "X" : "O")}</code> </>
+
   return (
     <>
-      <div className={styles.status}>{status} <code>{(xIsNext ? "X" : "O")}</code> </div>
+      <div className={styles.status}>{aux}</div>
       <div className={styles.row}>
         <Square value={squares[0]} onSquareClick={() =>handleClick(0)} />
         <Square value={squares[1]} onSquareClick={() =>handleClick(1)} />
